@@ -1,0 +1,28 @@
+## Environment & Secrets
+.env
+.env.local
+*.env
+secrets.json
+config.json
+*.key
+*.pem
+
+## Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+## Temp & runtime
+temp/
+*.tmp
+notify_queue.json
+
+## OS
+.DS_Store
+Thumbs.db
