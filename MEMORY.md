@@ -8,7 +8,7 @@
 ## Текущее состояние
 - Бот: аккаунт `valeryklintsou`, канал `testvaleryklintsou`
 - Процесс: `python zello_skill.py` (2 экземпляра PID — watchdog запускает)
-- Watchdog: `OpenClaw_ZelloSkill` в Планировщике задач (каждые 5 мин)
+- Watchdog: ❌ УДАЛЁН — если канал ляжет, Valery сообщит в Telegram вручную
 - Users online: 2
 
 ## Уведомления (КРИТИЧНО)
@@ -42,6 +42,12 @@ Get-Content C:\Users\Val\.openclaw\skills\zello\zello_err.log -Tail 20
 
 ## Auto-reconnect
 Добавлен в сессии 07.03: при kicked/обрыве — exponential backoff 5→60 сек, бесконечный retry.
+
+## Сделано в сессии 11.03.2026
+- ✅ Бот упал — перезапущен вручную (2 PID: 29808, 51768)
+- ✅ Watchdog `OpenClaw_ZelloSkill` — подтверждено что задачи уже нет в Планировщике
+- ✅ Договорились: мониторинг вручную, Valery пишет в Telegram если упало
+- ✅ MEMORY.md обновлён (watchdog помечен удалённым)
 
 ## Сделано в сессии 07-09.03.2026
 - ✅ Проверен статус (channel online, users=2)
